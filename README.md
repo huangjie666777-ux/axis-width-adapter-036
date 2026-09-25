@@ -1,15 +1,12 @@
-# 地形等高线
+# HTTP缓存反向代理
 
-Vue与TypeScript基础项目，尚未实现等高线业务功能。
-
-环境：Node.js22.19.0、npm10.9.3、TypeScript5.8.3、Vue3.5.13、Vite6.2.0、Vitest3.0.8。
-项目依赖已准备；锁文件用于恢复相同版本。
+Go1.27.1与Chi5.2.1基础项目。Chi依赖已放入vendor，可直接构建。
+当前仅包含HTTP启动入口和/healthz，尚未实现代理与缓存业务。
 
 ```sh
-npm ci
-npm run dev -- --port 5173
-npm run build
-npm test
+go build -o bin/server ./cmd/server
+go test ./...
+go run ./cmd/server
 ```
 
-当前没有业务测试。开发服务端口可以用Vite参数指定。
+LISTEN_ADDR指定监听地址，默认127.0.0.1:8080。
