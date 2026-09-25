@@ -1,8 +1,13 @@
-bin/
-coverage*
-*.test
+.venv/
+__pycache__/
+*.pyc
+sim_build/
+build/
+*.vvp
+*.vcd
+*.fst
+results.xml
 .env
 .env.*
-!.env.example
 *.pem
 *.key
